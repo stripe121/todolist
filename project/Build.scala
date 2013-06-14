@@ -15,7 +15,11 @@ object ApplicationBuild extends Build {
 
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    // Add your own project settings here      
+    // Add your own project settings here
   )
 
+
+  val appDependencies = Seq(
+  "postgresql" % "postgresql" % "8.4-702.jdbc4"
+)
 }
